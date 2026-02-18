@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Busca Médica - Cirurgia sem sangue</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Motor de Busca de Artigos Médicos</h1>
+        <p>
+          Encontre artigos de revistas médicas reputadas sobre intervenções cirúrgicas sem uso de sangue e hemoderivados.
+        </p>
+      </header>
+
+      <section class="card">
+        <form id="search-form">
+          <label for="term">Tema clínico/cirúrgico</label>
+          <input
+            id="term"
+            name="term"
+            type="text"
+            placeholder="Ex.: cirurgia cardíaca, ortopedia, transplante"
+            required
+          />
+
+          <label for="max-results">Quantidade máxima de resultados</label>
+          <input id="max-results" name="max-results" type="number" min="5" max="50" value="15" />
+
+          <button type="submit">Pesquisar artigos</button>
+        </form>
+      </section>
+
+      <section class="card" id="email-card">
+        <h2>Enviar resultados por e-mail</h2>
+        <p>
+          Depois da busca, você pode abrir seu cliente de e-mail com os resultados selecionados.
+        </p>
+        <label for="recipient-email">Destinatário</label>
+        <input id="recipient-email" type="email" placeholder="nome@exemplo.com" />
+        <button id="send-email" disabled>Preparar e-mail com resultados</button>
+      </section>
+
+      <section class="card">
+        <h2>Resultados</h2>
+        <p class="hint">Fontes priorizadas: The Lancet, BMJ, JAMA, NEJM, Annals of Surgery, Transfusion e outras revistas de alto impacto.</p>
+        <div id="status">Digite um tema e inicie a pesquisa.</div>
+        <ul id="results"></ul>
+      </section>
+    </main>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
